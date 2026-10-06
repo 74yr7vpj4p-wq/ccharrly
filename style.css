@@ -184,13 +184,8 @@ p{
 .intro{
 
   color:var(--muted);
-  marging-top:35px;
-
-}
 font-family:"Playfair Display",serif;
-
-  font-style:italic;
-
+font-style:italic;
 }
 button{
 
