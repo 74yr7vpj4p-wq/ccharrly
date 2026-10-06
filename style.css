@@ -103,7 +103,11 @@ body::before{
   text-align:center;
 
 }
+.hero .eyebrow{
 
+  margin-bottom:-5px;
+
+}
 .hero{
 
   background:
@@ -126,7 +130,7 @@ body::before{
 
   color:var(--muted);
 
-  margin:0 0 2px;
+  margin:0 0 20px;
 
 }
 
