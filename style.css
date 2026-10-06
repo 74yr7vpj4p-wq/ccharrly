@@ -26,37 +26,70 @@ body{
   overflow-x:hidden;
 }
 
-/* FLORECITAS */
+/* 🌸 FLORES POR TODO EL FONDO */
+
 body::before{
-  content:"🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿";
+  content:
+    "🌸     🌸          🌸     🌸       🌸          🌸
+     
+     🌸          🌸     🌸          🌸      🌸
+     
+     🌸     🌸          🌸      🌸          🌸     🌸
+     
+     🌸          🌸      🌸          🌸
+     
+     🌸     🌸          🌸     🌸       🌸          🌸
+     
+     🌸          🌸     🌸          🌸      🌸
+     
+     🌸     🌸          🌸      🌸          🌸     🌸
+     
+     🌸          🌸      🌸          🌸";
+
   position:fixed;
-  inset:0;
+  inset:-20px;
   z-index:-1;
   pointer-events:none;
-  color:#e7a1ad;
-  font-size:15px;
-  line-height:7;
-  letter-spacing:7vw;
-  opacity:.38;
-  transform:rotate(-8deg) scale(1.15);
+
+  font-size:20px;
+  line-height:3.7;
+  letter-spacing:8px;
+
+  opacity:.78;
   white-space:pre-wrap;
-  word-spacing:4vw;
+
+  transform:rotate(-4deg) scale(1.08);
 }
 
-/* SEGUNDA CAPA DE FLORES */
+/* UNA SEGUNDA CAPA PARA QUE HAYA MÁS 🌸 */
+
 body::after{
-  content:"✿     🌸          ✿       🌷          🌸       ✿          🌷";
+  content:
+    "🌸          🌸       🌸          🌸
+     
+     🌸     🌸          🌸      🌸          🌸
+     
+     🌸          🌸     🌸          🌸
+     
+     🌸     🌸          🌸      🌸          🌸
+     
+     🌸          🌸       🌸          🌸
+     
+     🌸     🌸          🌸      🌸          🌸";
+
   position:fixed;
-  inset:0;
+  inset:-30px;
   z-index:-1;
   pointer-events:none;
-  color:#edb1ba;
-  font-size:11px;
-  line-height:10;
-  letter-spacing:5vw;
-  opacity:.28;
-  transform:rotate(6deg);
+
+  font-size:16px;
+  line-height:5;
+  letter-spacing:12px;
+
+  opacity:.55;
   white-space:pre-wrap;
+
+  transform:rotate(5deg) scale(1.1);
 }
 
 /* PANTALLAS */
@@ -73,43 +106,19 @@ body::after{
   position:relative;
 }
 
-/* fondo suave para que las flores se vean delicadas */
 .hero{
   background:
     radial-gradient(
       circle at 20% 20%,
-      rgba(255,255,255,.75),
+      rgba(255,255,255,.78),
       transparent 32%
     ),
     radial-gradient(
       circle at 80% 80%,
-      rgba(255,226,232,.35),
+      rgba(255,226,232,.25),
       transparent 32%
     ),
-    rgba(255,250,242,.72);
-}
-
-/* FLORES EXTRA EN LAS SECCIONES */
-.section::before{
-  content:"✿";
-  position:absolute;
-  top:8%;
-  left:8%;
-  font-size:14px;
-  color:#e59aa8;
-  opacity:.45;
-  transform:rotate(-15deg);
-}
-
-.section::after{
-  content:"✿";
-  position:absolute;
-  bottom:9%;
-  right:9%;
-  font-size:12px;
-  color:#e59aa8;
-  opacity:.4;
-  transform:rotate(20deg);
+    rgba(255,250,242,.55);
 }
 
 .eyebrow{
@@ -360,14 +369,14 @@ button{
   }
 
   body::before{
-    font-size:12px;
-    line-height:8;
-    letter-spacing:5vw;
+    font-size:18px;
+    line-height:4;
+    letter-spacing:5px;
   }
 
   body::after{
-    font-size:9px;
-    line-height:11;
-    letter-spacing:4vw;
+    font-size:14px;
+    line-height:5;
+    letter-spacing:7px;
   }
 }
