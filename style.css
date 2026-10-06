@@ -1,1 +1,373 @@
-*{box-sizing:border-box} :root{--paper:#f5f1eb;--paper2:#eee7df;--ink:#292724;--muted:#77716a;--accent:#a36f68;--line:#ded6cd}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.8}.hero,.section{min-height:100vh;padding:72px 24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.hero{background:radial-gradient(circle at 18% 18%,rgba(163,111,104,.13),transparent 30%),radial-gradient(circle at 82% 78%,rgba(80,70,60,.07),transparent 30%),var(--paper)}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--muted);margin:0 0 20px}h1,h2{font-family:"Playfair Display",serif;font-weight:500;line-height:1.15}h1{font-size:clamp(7rem,27vw,13rem);margin:0;letter-spacing:-.07em}h2{font-size:clamp(2rem,7vw,4rem);max-width:760px;margin:0 0 28px}p{max-width:650px;margin:0 auto 20px}.intro{color:var(--muted)}button{border:0;cursor:pointer;font:inherit}.btn{margin-top:25px;padding:13px 32px;border-radius:100px;background:var(--ink);color:#fff}.section{border-top:1px solid var(--line);animation:appear .8s ease both}.section button:not(.btn),.music button{margin-top:25px;background:transparent;color:var(--accent);font-weight:600}.hidden{display:none!important}@keyframes appear{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}.emphasis{font-family:"Playfair Display",serif;font-style:italic;font-size:1.45rem;margin-top:28px}.fish{width:min(330px,80vw);margin:35px auto 0}.fish img{width:100%;max-height:300px;object-fit:contain}.fish p{font-family:"Playfair Display",serif;font-style:italic;color:var(--muted)}.grid{width:min(900px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:25px 0}.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border:10px solid #fff;box-shadow:0 12px 35px rgba(40,30,20,.1)}.photo-ending{font-family:"Playfair Display",serif;font-style:italic;color:var(--muted)}.letter{width:min(620px,94vw);padding:16px;background:#fff9;box-shadow:0 18px 45px #281e1420;margin-top:30px;transform:rotate(-1deg)}.letter img{width:100%;max-height:72vh;object-fit:contain}.heart{color:var(--accent);font-size:2rem}.love{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(2rem,8vw,4.5rem);color:var(--accent)}.final{background:var(--paper2)}.signature{font-family:"Playfair Display",serif;font-style:italic;font-size:1.35rem;margin-top:35px}.ps{margin-top:55px;color:var(--muted);font-size:.8rem}.music{text-align:center;padding:55px 24px 70px;border-top:1px solid var(--line)}.links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px}.links a{color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:8px 14px;border-radius:100px}.note{font-size:.75rem;color:var(--muted)}@media(max-width:700px){.grid{grid-template-columns:1fr 1fr}.grid img:nth-child(3){display:none}}
+*{
+  box-sizing:border-box;
+}
+
+:root{
+  --paper:#fffaf2;
+  --paper2:#fff5ec;
+  --ink:#302b29;
+  --muted:#887b76;
+  --accent:#d88c9a;
+  --accent-dark:#c87586;
+  --line:#eaded7;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.8;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* FLORECITAS */
+body::before{
+  content:"🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿  🌸  ✿  🌷  ✿";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  color:#e7a1ad;
+  font-size:15px;
+  line-height:7;
+  letter-spacing:7vw;
+  opacity:.38;
+  transform:rotate(-8deg) scale(1.15);
+  white-space:pre-wrap;
+  word-spacing:4vw;
+}
+
+/* SEGUNDA CAPA DE FLORES */
+body::after{
+  content:"✿     🌸          ✿       🌷          🌸       ✿          🌷";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  color:#edb1ba;
+  font-size:11px;
+  line-height:10;
+  letter-spacing:5vw;
+  opacity:.28;
+  transform:rotate(6deg);
+  white-space:pre-wrap;
+}
+
+/* PANTALLAS */
+
+.hero,
+.section{
+  min-height:100vh;
+  padding:72px 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+/* fondo suave para que las flores se vean delicadas */
+.hero{
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.75),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255,226,232,.35),
+      transparent 32%
+    ),
+    rgba(255,250,242,.72);
+}
+
+/* FLORES EXTRA EN LAS SECCIONES */
+.section::before{
+  content:"✿";
+  position:absolute;
+  top:8%;
+  left:8%;
+  font-size:14px;
+  color:#e59aa8;
+  opacity:.45;
+  transform:rotate(-15deg);
+}
+
+.section::after{
+  content:"✿";
+  position:absolute;
+  bottom:9%;
+  right:9%;
+  font-size:12px;
+  color:#e59aa8;
+  opacity:.4;
+  transform:rotate(20deg);
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:.7rem;
+  color:var(--muted);
+  margin:0 0 20px;
+}
+
+h1,
+h2{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  line-height:1.15;
+}
+
+h1{
+  font-size:clamp(7rem,27vw,13rem);
+  margin:0;
+  letter-spacing:-.07em;
+  color:#3a3330;
+}
+
+h2{
+  font-size:clamp(2rem,7vw,4rem);
+  max-width:760px;
+  margin:0 0 28px;
+}
+
+p{
+  max-width:650px;
+  margin:0 auto 20px;
+}
+
+.intro{
+  color:var(--muted);
+}
+
+/* BOTONES */
+
+button{
+  border:0;
+  cursor:pointer;
+  font:inherit;
+}
+
+.btn{
+  margin-top:25px;
+  padding:13px 32px;
+  border-radius:100px;
+  background:#3a3330;
+  color:#fff;
+  box-shadow:0 8px 20px rgba(70,45,40,.12);
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  background:#4a403d;
+}
+
+.section{
+  border-top:1px solid var(--line);
+  animation:appear .8s ease both;
+}
+
+.section button:not(.btn),
+.music button{
+  margin-top:25px;
+  background:transparent;
+  color:var(--accent-dark);
+  font-weight:600;
+}
+
+.section button:not(.btn):hover,
+.music button:hover{
+  color:#b96376;
+}
+
+.hidden{
+  display:none!important;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* TEXTO ESPECIAL */
+
+.emphasis{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-size:1.45rem;
+  margin-top:28px;
+}
+
+/* PECES */
+
+.fish{
+  width:min(330px,80vw);
+  margin:35px auto 0;
+}
+
+.fish img{
+  width:100%;
+  max-height:300px;
+  object-fit:contain;
+}
+
+.fish p{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  color:var(--muted);
+}
+
+/* FOTOS */
+
+.grid{
+  width:min(900px,100%);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:25px 0;
+}
+
+.grid img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border:10px solid #fff;
+  box-shadow:0 12px 35px rgba(80,50,40,.10);
+}
+
+.photo-ending{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  color:var(--muted);
+}
+
+/* CARTA */
+
+.letter{
+  width:min(620px,94vw);
+  padding:16px;
+  background:#fff;
+  box-shadow:0 18px 45px rgba(80,50,40,.12);
+  margin-top:30px;
+  transform:rotate(-1deg);
+}
+
+.letter img{
+  width:100%;
+  max-height:72vh;
+  object-fit:contain;
+}
+
+/* CORAZÓN */
+
+.heart{
+  color:var(--accent);
+  font-size:2rem;
+}
+
+/* TE AMOOOO */
+
+.love{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-size:clamp(2rem,8vw,4.5rem);
+  color:var(--accent-dark);
+}
+
+/* FINAL */
+
+.final{
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.7),
+      transparent 35%
+    ),
+    var(--paper2);
+}
+
+.signature{
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-size:1.35rem;
+  margin-top:35px;
+}
+
+.ps{
+  margin-top:55px;
+  color:var(--muted);
+  font-size:.8rem;
+}
+
+/* MÚSICA */
+
+.music{
+  text-align:center;
+  padding:55px 24px 70px;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.links a{
+  color:var(--ink);
+  text-decoration:none;
+  border:1px solid var(--line);
+  padding:8px 14px;
+  border-radius:100px;
+  background:rgba(255,255,255,.45);
+}
+
+.note{
+  font-size:.75rem;
+  color:var(--muted);
+}
+
+/* CELULAR */
+
+@media(max-width:700px){
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .grid img:nth-child(3){
+    display:none;
+  }
+
+  body::before{
+    font-size:12px;
+    line-height:8;
+    letter-spacing:5vw;
+  }
+
+  body::after{
+    font-size:9px;
+    line-height:11;
+    letter-spacing:4vw;
+  }
+}
