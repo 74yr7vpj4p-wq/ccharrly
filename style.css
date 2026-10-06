@@ -1,5 +1,18 @@
-body {
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.8;
+}
+.hero,
 
-  background: pink !important;
+.section,
+
+.music{
+
+  position:relative;
+
+  z-index:1;
 
 }
