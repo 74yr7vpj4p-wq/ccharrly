@@ -102,7 +102,7 @@ body::before{
 
     radial-gradient(circle at 82% 78%,rgba(80,70,60,.07),transparent 30%),
 
-    var(--paper);
+    transparent;
 
 }
 
