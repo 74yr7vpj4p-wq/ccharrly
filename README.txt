@@ -1,0 +1,1 @@
+Subí estos archivos a GitHub Pages. En fotos agregá foto1.jpg, foto2.jpg, foto3.jpg, carta.jpg y peces.jpg. En index.html reemplazá los # de los enlaces de música por tus links de YouTube.

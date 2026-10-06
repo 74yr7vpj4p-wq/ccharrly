@@ -1,0 +1,1 @@
+function go(id){const e=document.getElementById(id);e.classList.remove("hidden");setTimeout(()=>e.scrollIntoView({behavior:"smooth"}),50)}function openLetter(){document.getElementById("letter").classList.remove("hidden");document.getElementById("after").classList.remove("hidden")}function music(){document.getElementById("links").classList.toggle("hidden")}
