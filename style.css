@@ -22,77 +22,10 @@ body{
   color:var(--ink);
   font-family:"DM Sans",sans-serif;
   line-height:1.8;
-  position:relative;
   overflow-x:hidden;
 }
 
-/* 🌸 FLORES POR TODO EL FONDO */
-
-body::before{
-  content:
-    "🌸     🌸          🌸     🌸       🌸          🌸
-     
-     🌸          🌸     🌸          🌸      🌸
-     
-     🌸     🌸          🌸      🌸          🌸     🌸
-     
-     🌸          🌸      🌸          🌸
-     
-     🌸     🌸          🌸     🌸       🌸          🌸
-     
-     🌸          🌸     🌸          🌸      🌸
-     
-     🌸     🌸          🌸      🌸          🌸     🌸
-     
-     🌸          🌸      🌸          🌸";
-
-  position:fixed;
-  inset:-20px;
-  z-index:-1;
-  pointer-events:none;
-
-  font-size:20px;
-  line-height:3.7;
-  letter-spacing:8px;
-
-  opacity:.78;
-  white-space:pre-wrap;
-
-  transform:rotate(-4deg) scale(1.08);
-}
-
-/* UNA SEGUNDA CAPA PARA QUE HAYA MÁS 🌸 */
-
-body::after{
-  content:
-    "🌸          🌸       🌸          🌸
-     
-     🌸     🌸          🌸      🌸          🌸
-     
-     🌸          🌸     🌸          🌸
-     
-     🌸     🌸          🌸      🌸          🌸
-     
-     🌸          🌸       🌸          🌸
-     
-     🌸     🌸          🌸      🌸          🌸";
-
-  position:fixed;
-  inset:-30px;
-  z-index:-1;
-  pointer-events:none;
-
-  font-size:16px;
-  line-height:5;
-  letter-spacing:12px;
-
-  opacity:.55;
-  white-space:pre-wrap;
-
-  transform:rotate(5deg) scale(1.1);
-}
-
-/* PANTALLAS */
+/* CADA PANTALLA */
 
 .hero,
 .section{
@@ -104,22 +37,30 @@ body::after{
   align-items:center;
   text-align:center;
   position:relative;
+  overflow:hidden;
+
+  /* fondo cremita + flores */
+  background-color:#fffaf2;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='180' viewBox='0 0 150 180'%3E%3Ctext x='20' y='45' font-size='24'%3E🌸%3C/text%3E%3Ctext x='105' y='115' font-size='19'%3E🌸%3C/text%3E%3Ctext x='55' y='165' font-size='16'%3E🌸%3C/text%3E%3C/svg%3E");
+  background-size:150px 180px;
 }
 
+/* PRIMERA PANTALLA */
+
 .hero{
-  background:
+  background-color:#fffaf2;
+  background-image:
     radial-gradient(
       circle at 20% 20%,
-      rgba(255,255,255,.78),
+      rgba(255,255,255,.8),
       transparent 32%
     ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(255,226,232,.25),
-      transparent 32%
-    ),
-    rgba(255,250,242,.55);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='180' viewBox='0 0 150 180'%3E%3Ctext x='20' y='45' font-size='24'%3E🌸%3C/text%3E%3Ctext x='105' y='115' font-size='19'%3E🌸%3C/text%3E%3Ctext x='55' y='165' font-size='16'%3E🌸%3C/text%3E%3C/svg%3E");
+  background-size:auto,150px 180px;
 }
+
+/* TÍTULOS */
 
 .eyebrow{
   text-transform:uppercase;
@@ -303,13 +244,10 @@ button{
 /* FINAL */
 
 .final{
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(255,255,255,.7),
-      transparent 35%
-    ),
-    var(--paper2);
+  background-color:#fff5ec;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='180' viewBox='0 0 150 180'%3E%3Ctext x='20' y='45' font-size='24'%3E🌸%3C/text%3E%3Ctext x='105' y='115' font-size='19'%3E🌸%3C/text%3E%3Ctext x='55' y='165' font-size='16'%3E🌸%3C/text%3E%3C/svg%3E");
+  background-size:150px 180px;
 }
 
 .signature{
@@ -332,6 +270,11 @@ button{
   padding:55px 24px 70px;
   border-top:1px solid var(--line);
   position:relative;
+
+  background-color:#fffaf2;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='180' viewBox='0 0 150 180'%3E%3Ctext x='20' y='45' font-size='24'%3E🌸%3C/text%3E%3Ctext x='105' y='115' font-size='19'%3E🌸%3C/text%3E%3Ctext x='55' y='165' font-size='16'%3E🌸%3C/text%3E%3C/svg%3E");
+  background-size:150px 180px;
 }
 
 .links{
@@ -348,7 +291,7 @@ button{
   border:1px solid var(--line);
   padding:8px 14px;
   border-radius:100px;
-  background:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.7);
 }
 
 .note{
@@ -368,15 +311,10 @@ button{
     display:none;
   }
 
-  body::before{
-    font-size:18px;
-    line-height:4;
-    letter-spacing:5px;
-  }
-
-  body::after{
-    font-size:14px;
-    line-height:5;
-    letter-spacing:7px;
+  .hero,
+  .section,
+  .final,
+  .music{
+    background-size:125px 155px;
   }
 }
