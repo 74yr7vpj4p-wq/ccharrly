@@ -16,3 +16,19 @@ body{
   z-index:1;
 
 }
+/* AJUSTE FINAL DE LAS FLORES 🌸 */
+
+body::before{
+  opacity:.22 !important;
+  z-index:0 !important;
+}
+
+.hero,
+.section,
+.music{
+  position:relative;
+  z-index:1;
+  background:transparent !important;
+}
+
+
